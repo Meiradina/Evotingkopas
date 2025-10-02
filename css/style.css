@@ -1,0 +1,733 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+  background-color: #e2e2e2; 
+  font-family: Arial, sans-serif; 
+  color: #333; 
+  margin: 0; 
+  padding: 0; 
+  height: 100vh; 
+  padding-top: 70px;
+  position: relative; 
+}
+
+.background-image {
+  position: fixed; 
+  top: 55%; 
+  left: 50%; 
+  width: 100vw; 
+  height: 100vh;  
+  background-image: url('../assets/img/BPSlogo.png'); 
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: center center; 
+  filter: brightness(70%) opacity(30%); 
+  transform: translate(-50%, -50%); 
+  z-index: -1; 
+}
+
+
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #003366;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand kiri (logo + judul) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.brand-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.brand-title:hover {
+  color: #cccccc; /* saat hover */
+}
+
+
+.logo {
+  height: 35px;
+  width: auto;
+}
+
+/* Menu kanan */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #cccccc;
+}
+
+/* Aktif halaman */
+.nav-links li a.active {
+  border-bottom: 2px solid #ffffff; /* garis bawah putih */
+  padding-bottom: 3px;
+  color: #ffffff; /* tetap putih */
+}
+    
+/* Link "SEMI PERKA" */
+.app-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em; 
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px; 
+}
+/* Efek hover pada link "SEMI PERKA" */
+.app-name:hover {
+  color: #c5c5c5; 
+}
+
+/* Gaya untuk item navbar (link) */
+.nav-item {
+  color: #bbb;
+  text-decoration: none;
+  padding: 8px 15px; 
+  font-size: 1.1em;
+  margin: 0 10px; 
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Gaya untuk link yang aktif */
+.nav-item.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+/* Efek hover untuk semua link */
+.nav-item:hover {
+  color: #fff; 
+  border-bottom: 2px solid #fff; 
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #2c4a68; 
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* style beranda isi konten*/
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #e2e2e2; 
+  font-family: 'Roboto', sans-serif; 
+  color: #333; 
+}
+
+/* Konten Utama */
+.content-beranda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styling untuk welcome section */
+.welcome-section {
+  margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+  font-size: 2.5em;
+  color: #00264d;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 1.2em;
+  color: #555; 
+}
+
+/* Pencarian */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px solid #00264d; 
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  padding: 10px 15px;
+  flex-grow: 1;
+  font-size: 1em;
+  color: #333;
+  background: none;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #888;
+}
+
+.search-button {
+  background-color: #00264d; 
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  width: 18px;
+  height: auto;
+  filter: invert(1); 
+}
+
+/* Hover efek */
+.search-button:hover {
+  background-color: #004080; 
+}
+
+/* Styling untuk hasil pencarian */
+.search-results {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 800px; /* Maksimum lebar untuk hasil pencarian */
+}
+
+.search-results h2 {
+  font-size: 2em;
+  color: #00264d;
+  margin-bottom: 20px;
+}
+
+/* Container untuk hasil pencarian */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar item hasil pencarian */
+}
+
+/* Styling untuk setiap item hasil pencarian */
+.result-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.result-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk judul dan teks dalam item hasil pencarian */
+.result-item h3 {
+  font-size: 1.5em;
+  color: #184779;
+  margin-bottom: 5px;
+}
+
+.result-item p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Responsivitas untuk ukuran layar kecil */
+@media (max-width: 600px) {
+  .welcome-section h1 {
+    font-size: 2em; /* Ukuran font lebih kecil di layar kecil */
+  }
+
+  .search-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-bar input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px; /* Jarak di bawah input */
+  }
+
+  .search-results h2 {
+    font-size: 1.5em; /* Ukuran font lebih kecil di layar kecil */
+  }
+
+  .result-item {
+    padding: 15px; /* Padding lebih kecil di layar kecil */
+  }
+}
+
+/* style profil isi konten */
+/* Styling untuk Profil Section */
+.profil-section {
+  text-align: center; 
+  padding: 50px 20px; 
+}
+
+/* Styling untuk h1 */
+.profil-section h1 {
+  font-size: 20px; 
+  font-weight: bold; 
+  color: #646464; 
+  margin-bottom: 10px; 
+}
+
+.profil-section p {
+  font-size: 30px; 
+  color: #666; 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+}
+
+.bps-b {
+  color: #2d76c9; 
+}
+
+.bps-p {
+  color: #52c252; 
+}
+
+.bps-s {
+  color: #cf9242; 
+}
+
+/* Styling untuk paragraf */
+.profil-section p {
+  font-size: 30px; 
+  color: #2e2e2e; 
+  margin-bottom: 20px; 
+  line-height: 1.6; 
+  font-weight: bold;
+}
+
+/* Garis Gradasi di bawah paragraf */
+.profil-section::after {
+  content: ""; 
+  display: block;
+  height: 4px; 
+  background: linear-gradient(10deg, #2d76c9, #52c252, #cf9242); 
+  margin-top: 20px; 
+  width: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* styling card vieww */
+/* Styling untuk Card Section */
+.card-section {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+/* Styling untuk setiap card */
+.card {
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+/* Styling untuk gambar di dalam card */
+.card-img {
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin: 20px auto; 
+}
+
+/* Styling untuk konten card */
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+/* Styling untuk judul card */
+.card-title {
+  font-size: 20px; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+  color: #184779; 
+  text-align: center; 
+  transition: color 0.3s ease; 
+}
+
+/* Styling untuk teks dalam card */
+.card-text {
+  font-size: 16px; 
+  color: #555; 
+  margin-bottom: 12px; 
+  text-align: center; 
+  line-height: 1.5; 
+  padding: 0 10px; 
+  background-color: #ffffff; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+/* Efek hover untuk judul */
+.card-title:hover {
+  color: #1585fc; 
+}
+
+
+/* style voting isi konten */
+
+/* Voting form */
+.voting-form {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; 
+}
+
+.voting-form h2 {
+  color: #184779;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* Button Style (Kotak) */
+.voting-form .btn {
+  display: block; /* Menjadikan tombol seperti blok */
+  width: 80%; /* Lebar tombol */
+  margin: 10px auto; /* Agar tombol terpusat */
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #007BFF;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Hover and Focus Effects */
+.voting-form .btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.4);
+}
+
+.voting-form .btn:focus {
+  outline: none;
+  border: 2px solid #003d7a;
+}
+
+/* Active State */
+.voting-form .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.2);
+  background: #004488;
+}
+
+.voting-form button {
+    background-color: #00264d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 50px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.voting-form button:hover {
+  background-color: #1a2d64;
+  color: #70b8ff;
+}
+/* Pertanyaan dan opsi jawaban */
+/* Styling untuk keseluruhan form */
+/* Styling untuk input */
+.voting-form {
+  max-width: 600px; /* Lebar maksimum form voting */
+  width: 100%; /* Lebar 100% untuk responsif */
+  background-color: #ffffff; /* Warna latar belakang form */
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+  padding: 20px; /* Padding dalam form */
+}
+
+.voting-form h2 {
+  text-align: center; /* Rata tengah untuk judul form */
+  color: #333333; /* Warna teks judul */
+  margin-bottom: 20px; /* Jarak bawah untuk judul */
+}
+
+.question {
+  margin-bottom: 15px; /* Jarak bawah untuk setiap pertanyaan */
+}
+
+.question label {
+  display: block; /* Mengatur label menjadi block */
+  margin-bottom: 5px; /* Jarak bawah untuk label */
+  color: #555; /* Warna teks label */
+}
+
+.question select {
+  width: 100%; /* Lebar 100% untuk dropdown */
+  padding: 10px; /* Padding dalam dropdown */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 4px; /* Sudut membulat */
+  font-size: 16px; /* Ukuran font */
+  color: #333; /* Warna teks */
+}
+
+.voter-info {
+  margin-top: 20px; /* Jarak atas untuk informasi pemilih */
+}
+
+.voter-info label {
+  display: block; /* Mengatur label menjadi block */
+  margin-bottom: 5px; /* Jarak bawah untuk label */
+}
+
+.voter-info input {
+  width: 100%; /* Lebar 100% untuk input */
+  padding: 10px; /* Padding dalam input */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 4px; /* Sudut membulat */
+  font-size: 16px; /* Ukuran font */
+  color: #333; /* Warna teks */
+}
+/* Styling untuk Tombol Submit */
+.submit-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-button button {
+  background-color: #008dce;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.submit-button button:hover {
+  background-color: #0a2d50;
+  transform: translateY(-3px); 
+}
+
+
+/* styling result konten */
+/* Styling untuk header-result */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* agar elemen berada di tengah secara vertikal */
+}
+.header-result {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; 
+  padding: 15px;
+  background-color: transparent; 
+  color: white; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+  transition: transform 0.3s;
+}
+
+/* Styling untuk teks H1 di dalam header-result */
+.header-result h1 {
+  font-size: 2em;
+  color: #002b63;
+  font-weight: 600;
+}
+/* Pengaturan posisi untuk kontrol atas-bawah */
+.header-result.top {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.header-result.bottom {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+  
+.card-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  background: transparent; 
+  box-shadow: none;        
+  border: none;            
+  padding: 20px;  
+}         
+
+
+.card-konten-result {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 250px; /* Ukuran tetap untuk card */
+  transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi */
+}
+
+.card-konten-result img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Membuat sudut gambar bulat */
+}
+
+.card-konten-result h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.card-konten-result p {
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Efek hover */
+.card-konten-result:hover {
+  transform: translateY(-5px); /* Mengangkat card saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambah bayangan */
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .card-konten-result {
+      width: 100%; /* Mengubah ukuran card menjadi penuh pada layar kecil */
+  }
+}
+/* card beranda */
+.card-form {
+    background: linear-gradient(135deg, #1e4570, #16324f); /* biru tua dengan gradasi */
+    color: #ffffff;
+    padding: 22px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    margin-top: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* aksen tipis */
+}
+
+.card-form:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, #6b93b9, #1b3d63); /* lebih terang saat hover */
+}
+
+.card-form label {
+    font-weight: bold;
+    margin-bottom: 17px;
+    display: block;
+    color: #1ecbe1; /* biru cerah untuk highlight */
+    font-size: 1.1em;
+}
+
+.card-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    background: #1b263b;
+    color: #ffffff;
+    outline: none;
+    transition: 0.2s;
+    margin-top: 15px;
+}
+
+.card-form select:focus {
+    background: #243b55;
+    border: 2px solid #1ecbe1;
+}
