@@ -7,6 +7,7 @@
     <title>Hasil Penilaian - SEMI PERKA</title>
     <link rel="icon" href="assets/img/BPSlogo.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <div class="background-image"></div>
@@ -41,7 +42,7 @@
     <div class="card-result">
 
     <!-- Pegawai Terbaik (Hasil Voting) -->
-    <div id="Triwulan 1 2025"  class="card-konten-result" >
+    <div   class="card-konten-result"  >
         <h3>Pegawai Terbaik Triwulan I 2025</h3>
         <img src="assets/img/profil/Muhammad Kurniawan, S.Si.png" alt="Pegawai Terbaik">
         <p><strong>Nama:</strong>Muhammad Kurniawan, S.Si</p>
@@ -50,7 +51,7 @@
     </div>
             
     <!-- Pegawai Terbaik (Hasil Voting) -->
-    <div id="Triwulan 4 2024" class="card-konten-result" >
+    <div  class="card-konten-result" >
         <h3>Pegawai Terbaik Triwulan IV 2024</h3>
         <img src="assets/img/profil/Muhammad Kurniawan, S.Si.png" alt="Pegawai Terbaik">
         <p><strong>Nama:</strong>Muhammad Kurniawan, S.Si</p>
@@ -59,7 +60,7 @@
     </div>
             
     <!-- Pegawai Terbaik (Hasil Voting) -->
-    <div id="Triwulan 3 2024"  class="card-konten-result" >
+    <div  class="card-konten-result" >
         <h3>Pegawai Terbaik Triwulan III 2024</h3>
         <img src="assets/img/profil/Muhammad Kurniawan, S.Si.png" alt="Pegawai Terbaik">
         <p><strong>Nama:</strong>Muhammad Kurniawan, S.Si</p>
@@ -68,16 +69,17 @@
     </div>
     
     <!-- Pegawai Terbaik (Periode Sebelumnya) -->
-    <div class="card-konten-result">
+    <div  class="card-konten-result"  >
         <h3>Pegawai Terbaik Triwulan II 2024</h3>
         <img src="assets/img/profil/Muhammad Kurniawan, S.Si.png" alt="Pegawai Terbaik Periode Sebelumnya">
         <p><strong>Nama:</strong>Muhammad Kurniawan, S.Si</p>
         <p><strong>Jabatan:</strong>Statistisi Ahli Muda</p>
         <p><strong>Skor Penilaian:</strong> N/A (Belum menggunakan SEMI PERKA)</p>
     </div>
+
     
     <!-- Change Ambassador (Hasil Voting) -->
-    <div class="card-konten-result">
+    <div   class="card-konten-result">
         <h3>Change Ambassador 2025</h3>
         <img src="assets/img/profil/Navy Yulianti Nukuhehe, S.Si.png" alt="Change Ambassador">
         <p><strong>Nama:</strong>Navy Yulianti Nukuhehe, S.Si</p>
@@ -86,7 +88,7 @@
     </div>
     
     <!-- Change Ambassador (Periode Sebelumnya) -->
-    <div class="card-konten-result">
+    <div   class="card-konten-result">
         <h3>Change Ambassador 2024</h3>
         <img src="assets/img/profil/Navy Yulianti Nukuhehe, S.Si.png" alt="Change Ambassador Periode Sebelumnya">
         <p><strong>Nama:</strong>Navy Yulianti Nukuhehe, S.Si</p>
