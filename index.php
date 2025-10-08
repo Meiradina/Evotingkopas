@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php'; // Menyertakan file koneksi
+include 'koneksi.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -11,39 +11,6 @@ include 'koneksi.php'; // Menyertakan file koneksi
     <link rel="icon" href="assets/img/BPSlogo.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    .card-konten-index,
-    .card-konten-index.ambassador {
-        width: 280px;       /* hanya ubah card, cukup kecil */
-        margin: 15px auto;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background: #fff;
-        box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    /* Khusus gambar dalam card */
-    .card-konten-index img,
-    .card-konten-index.ambassador img {
-        max-width: 150px;   /* foto lebih kecil */
-        height: auto;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Pastikan teks tetap jelas */
-    .card-konten-index h3,
-    .card-konten-index p {
-        font-size: 14px; 
-        color: #333;        /* jangan putih biar terlihat */
-        margin: 5px 0;
-    }
-</style>
 <body>
     <div class="background-image"></div>
     
@@ -61,6 +28,7 @@ include 'koneksi.php'; // Menyertakan file koneksi
     <!-- Menu kanan -->
 <ul class="nav-links">
       <li><a href="index.php" class="active">Beranda</a></li>
+      <li><a href="dashboard.php">Dashboard</a></li>
       <li><a href="profil.php">Profil</a></li>
       <li><a href="kategori_penilaian.php">Penilaian</a></li>
       <li><a href="result.php">Hasil</a></li>
@@ -83,8 +51,8 @@ include 'koneksi.php'; // Menyertakan file koneksi
         <div class="form-group">
     <select name="periode" id="periodePegawai" onchange="tampilkanHasil()" required>
     <option value="" disabled selected>Pilih Periode</option>
-    <option value="Triwulan3-2024">Triwulan 3 2024</option>
     <option value="Triwulan4-2024">Triwulan 4 2024</option>
+    <option value="Triwulan3-2024">Triwulan 3 2024</option>
     <option value="Triwulan2-2024">Triwulan 2 2024</option>
     <option value="Triwulan1-2025">Triwulan 1 2025</option>
     <option value="Triwulan2-2025">Triwulan 2 2025</option>

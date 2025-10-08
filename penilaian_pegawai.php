@@ -25,8 +25,9 @@
     <!-- Menu kanan -->
 <ul class="nav-links">
       <li><a href="index.php">Beranda</a></li>
+      <li><a href="dashboard.php">Dashboard</a></li>
       <li><a href="profil.php">Profil</a></li>
-      <li><a href="kategori_penilaian.php">Penilaian</a></li>
+      <li><a href="kategori_penilaian.php" class="active">Penilaian</a></li>
       <li><a href="result.php">Hasil</a></li>
     </ul>
   </div>
@@ -34,7 +35,7 @@
     </header>
 
     <!-- Form Voting Pegawai -->
-    <main class="voting-form">
+    <main class="voting-form-penilaian">
         <h2>Penilaian Pegawai Terbaik</h2>
         <form method="POST" action="submit_voting.php">
         <?php
