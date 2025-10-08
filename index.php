@@ -28,7 +28,7 @@ include 'koneksi.php';
     <!-- Menu kanan -->
 <ul class="nav-links">
       <li><a href="index.php" class="active">Beranda</a></li>
-      <li><a href="dashboard.php">Dashboard</a></li>
+      <li><a href="dashboard.php">Rekap</a></li>
       <li><a href="profil.php">Profil</a></li>
       <li><a href="kategori_penilaian.php">Penilaian</a></li>
       <li><a href="result.php">Hasil</a></li>

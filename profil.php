@@ -1,9 +1,11 @@
 <?php
 // Kode PHP Anda di sini
+include 'koneksi.php'; // otomatis juga konek ke koneksi.php
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +30,7 @@
     <!-- Menu kanan -->
 <ul class="nav-links">
       <li><a href="index.php">Beranda</a></li>
-      <li><a href="dashboard.php">Dashboard</a></li>
+      <li><a href="dashboard.php">Rekap</a></li>
       <li><a href="profil.php" class="active">Profil</a></li>
       <li><a href="kategori_penilaian.php">Penilaian</a></li>
       <li><a href="result.php">Hasil</a></li>
@@ -41,7 +43,7 @@
 <main>
     <section class="profil-section">
         <h1>Profil Seluruh Pegawai</h1>
-        <p>Pegawai <span class="bps-b">B</span><span class="bps-p">P</span><span class="bps-s">S</span> Kota Pasuruan</p>
+        <p>Pegawai <span class="bps-b">B</span><span class="bps-p">P</span><span class="bps-s">S</span> Kota Pasuruan  </p>
     </section>    
 
     <!-- Card View -->

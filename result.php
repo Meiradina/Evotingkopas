@@ -25,7 +25,7 @@
     <!-- Menu kanan -->
 <ul class="nav-links">
       <li><a href="index.php">Beranda</a></li>
-      <li><a href="dashboard.php">Dashboard</a></li>
+      <li><a href="dashboard.php">Rekap</a></li>
       <li><a href="profil.php">Profil</a></li>
       <li><a href="kategori_penilaian.php">Penilaian</a></li>
       <li><a href="result.php" class="active">Hasil</a></li>

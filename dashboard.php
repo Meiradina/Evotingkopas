@@ -1,37 +1,17 @@
 <?php
 include 'koneksi.php';
 
-// === Data  Berdasarkan Kekurangan jam Kerja 2025  ===
-$Nama = [
-    "Kepala BPS Kota Pasuruan",
-    "Kepala Subbagian Umum",
-    "Statistisi Penyelia",
-    "Statistisi Ahli Muda ",
-    "Statistisi Ahli Pertama ",
-    "Analis Pengelola Keuangan Pertama",
-    "Pranata Keuangan Mahir",
-];
-
-$jumlah = [1,1,6,8,1,1,1]; // jumlah pegawai sesuai jabatan
-
-// === Data Pegawai Terbaik per Triwulan ===
-$triwulan = ["Triwulan I 2024","Triwulan II 2024","Triwulan III 2024","Triwulan IV 2024"];
-$skorPegawai = [64,0,39,35];
-
-// === Data Change Ambassador per Tahun ===
-$tahun = ["2024","2025"];
-$skorAmbasador = [0,39];
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8"> <title>Dashboard - SEMI PERKA</title> <link rel="icon" href="assets/img/BPSlogo.png" type="image/png">
+<meta charset="UTF-8"> <title>Rekap - SEMI PERKA</title> <link rel="icon" href="assets/img/BPSlogo.png" type="image/png">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="dashboard">
+  <div class="background-image"></div>
   <!-- Navbar -->
   <header>
     <nav class="navbar">
@@ -43,7 +23,7 @@ $skorAmbasador = [0,39];
 
         <ul class="nav-links">
           <li><a href="index.php">Beranda</a></li>
-          <li><a href="dashboard.php" class="active">Dashboard</a></li>
+          <li><a href="dashboard.php" class="active">Rekap</a></li>
           <li><a href="profil.php">Profil</a></li>
           <li><a href="kategori_penilaian.php">Penilaian</a></li>
           <li><a href="result.php">Hasil</a></li>
@@ -54,25 +34,19 @@ $skorAmbasador = [0,39];
 
   <!-- Konten Utama -->
   <main class="container">
-    <!-- Info Cards -->
-    <div class="cards">
-      <div class="card">
-        <h3>Total Pegawai</h3>
-        <p><?= array_sum($jumlah); ?></p>
-      </div>
-      <div class="card">
-        <h3>Total Triwulan</h3>
-        <p><?= count($triwulan); ?></p>
-      </div>
-      <div class="card">
-        <h3>Total Ambassador</h3>
-        <p><?= count($tahun); ?></p>
-      </div>
-    </div>
+
+  <section class="welcome-section">
+  <h2 style="font-size: 2em; color: #00264d;"> Halaman Rekapitulasi SEMI PERKA Kota Pasuruan </h2>
+  <p style="text-align: center;">
+    Halaman ini menampilkan hasil rekapitulasi implementasi nilai-nilai <b>Berakhlak</b> ASN 
+    di lingkungan Pemerintah Kota Pasuruan <br>dalam bentuk grafik dan tabel</br> 
+  </p> 
+   </section>
+
 <!-- Pilihan Bulan -->
-<div style="text-align:center; margin-bottom:15px;">
-  <label><b>Pilih Bulan:</b></label>
-  <select id="bulan" onchange="updateCharts()" style="padding:5px; border-radius:5px;">
+<div style="text-align:center; margin-bottom:10px;">
+  <label style="font-size: 20px;"><b>Pilih Bulan:</b></label>
+  <select id="bulan" onchange="updateCharts()" style="font-size:16px; padding:5px; border-radius:5px;">
     <option value="Jan">Januari</option>
     <option value="Feb">Februari</option>
     <option value="Mar">Maret</option>
@@ -86,7 +60,7 @@ $skorAmbasador = [0,39];
 </div>
 
  <!-- Grafik Kekurangan Jam Kerja -->
-  <div class="charts">
+  <div class="dashboard-charts">
     <div class="chart-box">
       <h2>Jumlah Kekurangan Jam Kerja per Pegawai</h2>
       <canvas id="chartKekurangan"></canvas>
@@ -100,7 +74,6 @@ $skorAmbasador = [0,39];
   </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 // === Label Pegawai (19 Nama Lengkap) ===
 const pegawai = [
@@ -111,7 +84,7 @@ const pegawai = [
   "Navy Yulianti Nukuhehe","Anugrah Alief Pratama","Khoirunnisa"
 ];
 
-// === Data Kekurangan Jam Kerja (dummy contoh) ===
+// === Data Kekurangan Jam Kerja ===
 const dataKekurangan = {
   Jan: [0,30,0,0,14,0,0,0,49,0,0,0,0,0,0,0,0,9,0],
   Feb: [0,42,0,0,34,0,1,0,151,0,28,5,5,0,0,0,0,5,0],
@@ -121,7 +94,7 @@ const dataKekurangan = {
   Jun: [0,145,0,7,18,0,26,0,122,0,56,89,4,0,0,0,0,3,1],
   Jul: [0,89,0,0,44,0,49,15,83,0,122,1,6,40,0,0,0,1,2],
   Agu: [0,80,0,0,31,0,17,0,88,0,48,0,2,0,0,0,0,0,2],
-  Sep: [0,43,28,0,59,0,2,4,1,0,59,,19,79,0,0,0,7,]
+  Sep: [0,43,28,0,59,0,2,4,1,0,59,106,0,0,0,0,0,7,4]
 };
 
 // === Inisialisasi Grafik 1: Kekurangan Jam Kerja ===
@@ -162,7 +135,7 @@ const pegawai2 = [
   "Yuki Khaerunisa","Eka Prahara Resbiyanti"
 ];
 
-// === Data Penilaian Jam Kerja (dummy contoh nilai 70–100) ===
+// === Data Penilaian Jam Kerja ===
 const dataPenilaian = {
   Jan: [96.67,98.00,97.86,97.86,97.90,97.22,98.00,98.00,97.57,97.89,97.62,98.00,98.00,98.00,97.40,97.29,98.00,97.92],
   Feb: [97.00,98.00,98.00,98.00,98.00,97.17,98.00,98.00,98.00,97.47,98.00,98.00,98.00,97.38,98.00,97.71,97.86,97.92],
@@ -220,14 +193,13 @@ function updateCharts() {
 
   <div class="dashboard">
   <div class="dashboard-table-container">
-    <h3>Rekap Kekurangan Jam Kerja per Bulan (Jan–Sep)</h3>
+    <h3>Rekap Kekurangan Jam Kerja per Bulan (Jan-Sep)</h3>
     <table class="dashboard-table">
       <thead>
       <tr>
         <th rowspan="2">No</th>
         <th rowspan="2">Nama</th>
         <th rowspan="2">Jabatan</th>
-        <!-- Judul utama untuk kolom bulan -->
         <th colspan="9">Bulan</th>
         <th rowspan="2">Total</th>
       </tr>
@@ -258,7 +230,6 @@ function updateCharts() {
           <td>0</td>
           <td>0</td>
       <td><strong>0</strong></td>
-
         </tr>
       <tr>
           <td>2</td>
@@ -365,6 +336,7 @@ function updateCharts() {
           <td>4</td>
           <td><strong>35</strong></td>
         </tr>
+        <tr>
         <td>9</td>
           <td>Sasono Widoyoko</td>
           <td>Statistisi Ahli Pertama </td>
@@ -379,6 +351,7 @@ function updateCharts() {
           <td>1</td>
           <td><strong>723</strong></td>
         </tr>
+        <tr>
         <td>10</td>
           <td>Dewi Sulistiyawati</td>
           <td>Statistisi Ahli Muda </td>
@@ -392,7 +365,8 @@ function updateCharts() {
           <td>0</td>
           <td>0</td>
           <td><strong>0</strong></td>
-        </tr>       
+        </tr> 
+        <tr>      
          <td>11</td>
           <td>Yulifah Suryana</td>
           <td>Statistisi Ahli Pertama </td>
@@ -407,7 +381,8 @@ function updateCharts() {
           <td>59</td>
           <td><strong>391</strong></td>
         </tr>
-               <td>12</td>
+        <tr>
+         <td>12</td>
           <td>Mochammad Agus Masrul</td>
           <td>Statistisi Ahli Pertama </td>
           <td>0</td>
@@ -519,7 +494,6 @@ function updateCharts() {
           <td>4</td>
           <td><strong>9</strong></td>
         </tr>
-
       </tbody>
     </table>
   </div>
@@ -528,14 +502,14 @@ function updateCharts() {
   
 <!-- Tabel -->
   <div class="dashboard-table-container">
-    <h2>Rekap Penilaian Kinerja 2025</h2>
+    <h3>Rekap Penilaian Kinerja 2025</h3>
     <table class="dashboard-table">
       <thead>
         <tr>
         <th rowspan="2">No</th>
         <th rowspan="2">Nama</th>
         <th rowspan="2">Jabatan</th>
-        <th colspan="9">Rata-rata Hasil Kerja</th>
+        <th colspan="9">Rata - Rata Hasil Kerja</th>
       </tr>
       <tr>
         <th>Januari</th>
@@ -763,7 +737,7 @@ function updateCharts() {
         </tr>
         <tr>
           <td>16</td>
-          <td>[340055116] MOhammad Lail Kurniawan S.Si, M.M</td>
+          <td>[340055116] Mohammad Lail Kurniawan S.Si, M.M</td>
           <td>Kepala Subbagian Umum</td>
           <td>97.29</td>
           <td>97.71</td>
@@ -806,44 +780,5 @@ function updateCharts() {
       </tbody>
     </table>
   </div>
-
-  <!-- Script Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Grafik Jumlah Pegawai
-    new Chart(document.getElementById('chartKekurangan'), {
-      type: 'bar',
-      data: {
-        labels: <?= json_encode($jabatan); ?>,
-        datasets: [{
-          label: 'Jumlah Pegawai',
-          data: <?= json_encode($jumlah); ?>,
-          backgroundColor: ['#007bff','#28a745','#ffc107','#dc3545','#6f42c1','#fd7e14','#20c997'],
-          borderColor: '#003366',
-          borderWidth: 1,
-          borderRadius: 6
-        }]
-      },
-      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-    });
-
-    // Grafik Dummy Penilaian (contoh)
-    new Chart(document.getElementById('chartKinerja'), {
-      type: 'line',
-      data: {
-        labels: <?= json_encode($triwulan); ?>,
-        datasets: [{
-          label: 'Skor Pegawai Terbaik',
-          data: <?= json_encode($skorPegawai); ?>,
-          borderColor: '#007bff',
-          backgroundColor: 'rgba(0, 123, 255, 0.2)',
-          fill: true,
-          tension: 0.3
-        }]
-      },
-      options: { scales: { y: { beginAtZero: true } } }
-    });
-  </script>
 </body>
-
 </html>

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penilaian - SEMI PERKA</title>
+    <title>Penilaian Pegawai Terbaik - SEMI PERKA</title>
+    <link rel="icon" href="assets/img/BPSlogo.png" type="image/png" sizes="32x32">
     <link rel="icon" href="assets/img/BPSlogo.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -25,7 +26,7 @@
     <!-- Menu kanan -->
 <ul class="nav-links">
       <li><a href="index.php">Beranda</a></li>
-      <li><a href="dashboard.php">Dashboard</a></li>
+      <li><a href="dashboard.php">Rekap</a></li>
       <li><a href="profil.php">Profil</a></li>
       <li><a href="kategori_penilaian.php" class="active">Penilaian</a></li>
       <li><a href="result.php">Hasil</a></li>
